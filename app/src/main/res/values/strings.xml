@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Kudos</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="c_password">password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Sign in</string>
+    <string name="slogan">Speak , Believe and Receive </string>
+    <string name="postDescription">Write A Post....</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+</resources>

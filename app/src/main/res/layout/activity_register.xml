@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+
+    <ImageView
+        android:layout_width="201dp"
+        android:layout_height="196dp"
+        android:background="@drawable/swoosh" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="18sp"
+        android:text="@string/slogan"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="127dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="120dp"
+        android:height="100dp"
+        android:drawableLeft="@drawable/baseline_account_circle_black_18dp"
+        android:hint="@string/username" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="50dp"
+        android:height="70dp"
+        android:drawableLeft="@drawable/baseline_lock_black_18dp"
+        android:hint="@string/password"
+
+        />
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="50dp"
+        android:height="70dp"
+        android:drawableLeft="@drawable/baseline_lock_black_18dp"
+        android:hint="@string/c_password"
+
+        />
+
+
+    <Button
+        android:id="@+id/create_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/sign_up" />
+
+
+</LinearLayout>
