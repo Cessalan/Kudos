@@ -9,5 +9,20 @@
     <string name="postDescription">Write A Post....</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
+    <string name="post">post</string>
+    <string name="write_a_post">Write A Post</string>
+    <string name="logo">Logo</string>
+    <string name="db_drop">DROP TABLE IF EXISTS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exit">exit</string>
+    <string-array name="nav">
+        <item> Navigation</item>
+        <item>Home</item>
+        <item>Login</item>
+        <item>Write A Post</item>
+        <item>Logout</item>
+    </string-array>
 
 </resources>

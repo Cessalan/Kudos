@@ -4,12 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="20dp"
-    tools:context=".WritePostActivity">
+    android:background="@drawable/gradient_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+    <fragment
+        android:id="@+id/navDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.kudos.navigationFragment"
+        />
+
+
+    <ImageView
+        android:layout_width="201dp"
+        android:layout_height="150dp"
+        android:background="@drawable/swoosh"
+        android:contentDescription="@string/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="18sp"
+        android:text="@string/slogan"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:paddingBottom="50dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
 
 
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="15dp"
+        android:background="@color/post"
+
+        >
+
+        <RelativeLayout
+            android:paddingTop="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/userPost"
+                android:paddingTop="14dp"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/write_a_post" />
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/post_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/post" />
 
 
 </LinearLayout>
-
