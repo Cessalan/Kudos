@@ -12,12 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class navigationFragment extends Fragment {
-    private TextView userIdTv;
+   public TextView userId;
 
     public navigationFragment() {
         // Required empty public constructor
@@ -35,15 +36,21 @@ public void navIntent(Class destination ){
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
         // Inflate the layout for this fragment
        View view= inflater.inflate(R.layout.fragment_navigation, container, false);
+        String value;
+    userId=view.findViewById(R.id.userId);
+//        Bundle b=getArguments();
+//        userIdRL= getArguments().getString("userId");
+        try{
+           value = getArguments().getString("userId");
+        }catch (Exception e){
+            value="0";
+        }
 
-        // show userId from login activity inside the TextView
-        Bundle b= getArguments();
-         userIdTv= view.findViewById(R.id.userId);
-         /*TO WORK ON*/
-        // userIdTv.setText("NAME GOES HERE");
+        userId.setText(value);
+
+
 
        //get spinner from xml
        Spinner spinner=view.findViewById(R.id.spinner);

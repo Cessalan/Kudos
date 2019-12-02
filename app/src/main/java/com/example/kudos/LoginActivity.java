@@ -59,8 +59,9 @@ public class LoginActivity extends AppCompatActivity {
         register_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int REQ_CODE=2;
                 Intent intent= new Intent(v.getContext(),RegisterActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,REQ_CODE);
             }
         });
     }
@@ -91,15 +92,16 @@ public class LoginActivity extends AppCompatActivity {
 
 
                     //display logged in user in the navigation fragment
-                    Bundle bundle= new Bundle();
-                    bundle.putString("userId",uname);
+//                    Bundle bundle= new Bundle();
+//                    bundle.putString("userId",uname);
+//
+//                    FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+//                    navigationFragment menuFragment= new navigationFragment();
+//                    menuFragment.setArguments(bundle);
+//
+//                    ft.replace(R.id.userId,menuFragment);
+//                    ft.commit();
 
-                    navigationFragment menuFragment= new navigationFragment();
-                    menuFragment.setArguments(bundle);
-
-                    FragmentTransaction transaction=this.getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.myMenu,menuFragment);
-                    transaction.commit();
 
 
 

@@ -2,7 +2,9 @@ package com.example.kudos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,15 +19,44 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText pwd;
     private EditText pwdConfirm;
     private Button  register;
+    private Button goBackToLogin;
     private String strUsername;
     private String strPwd;
     private  String strPwdConf;
+
+
+    //custom toast
+    public void showToast(String txt){
+
+        Toast toast=Toast.makeText(this,txt,Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER_VERTICAL,0,0);
+        toast.show();
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
         register = findViewById(R.id.create_btn);
+        goBackToLogin=findViewById(R.id.goto_login);
+
+
+
+
+
+        //two way intent, brings back to login when clicked
+        goBackToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=getIntent();
+                setResult(RESULT_OK,intent);
+                finish();
+            }
+        });
+
+
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,18 +97,20 @@ public class RegisterActivity extends AppCompatActivity {
                     db.close();
 
 
-                    Toast.makeText(this,"Your Account "+db.getAccount(strUsername).getUsername()+" has successfully been created.",Toast.LENGTH_LONG).show();
+                    showToast("Your account  "+ strUsername+" has been created");
 
 
 
                 }else{
-                    Toast.makeText(this,"Please pick a different username.",Toast.LENGTH_LONG).show();
+
+                    showToast("Please pick a different username");
 
                 }
 
 
             }else{
-                Toast.makeText(this,"The password does not match.",Toast.LENGTH_LONG).show();
+
+                showToast("The passwords do not match");
             }
 
         }
